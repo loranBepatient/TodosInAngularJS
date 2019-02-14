@@ -12,14 +12,28 @@
 
 <body>
 
-  <div ng-controller="todosController as ctrl">
-    <h1>{{ctrl.title}}</h1>
-
-    <ul>
-      <li ng-repeat="todo in ctrl.todos">{{todo.title}}</li>
+  <div class=container ng-controller="todosController as ctrl">
+    <div class="row">
+      <div class="col">
+        <h1>{{ctrl.title}}</h1>
+      </div>
+    </div>
+    <div class="input-group flex-nowrap">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping"></span>
+      </div>
+      <input ng-model='ctrl.query' type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+    <ul class='list-group'>
+      <li class='list-group-item' ng-repeat="todo in ctrl.todos | filter:ctrl.query">{{todo.title}}</li>
     </ul>
 
   </div>
+
+  <!-- VENDOR -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
   <script src="app/app.module.js"></script>
   <script src="app/app.controller.js"></script>
 </body>

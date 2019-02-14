@@ -2,6 +2,7 @@
   function controller() {
     var ctrl = this;
     ctrl.title = 'My Todos'
+    ctrl.query = ''
     ctrl.todos = [
       {
         "userId": 1,
