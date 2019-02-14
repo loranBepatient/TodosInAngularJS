@@ -11,9 +11,17 @@
 </head>
 
 <body>
-  {{4 + 4 }}
 
+  <div ng-controller="todosController as ctrl">
+    <h1>{{ctrl.title}}</h1>
+
+    <ul>
+      <li ng-repeat="todo in ctrl.todos">{{todo.title}}</li>
+    </ul>
+
+  </div>
   <script src="app/app.module.js"></script>
+  <script src="app/app.controller.js"></script>
 </body>
 
 </html>
