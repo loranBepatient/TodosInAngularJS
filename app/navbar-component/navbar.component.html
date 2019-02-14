@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li ng-repeat="link in $ctrl.links" class="nav-item" ng-class="link.active ? 'active' :''">
+        <a ng-href="{{link.link}}" ng-click="$ctrl.onClick(i) " class="nav-link" ng-class="link.disabled? 'disabled' :''" aria-disabled="{{link.disabled}}">
+          {{link.label}}
+        </a>
+      </li>
+  </div>
+</nav>
