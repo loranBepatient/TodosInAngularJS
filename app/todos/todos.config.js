@@ -1,5 +1,5 @@
 (function() {
-  function routes(stateProvider) {
+  function routes($stateProvider) {
     var todos = {
       name: "todos",
       url: "/todos",
