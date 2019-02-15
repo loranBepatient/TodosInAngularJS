@@ -19,6 +19,7 @@
   </div>
   <ul class="list-group">
     <todo-component
+      class="star"
       ng-repeat="todo in $ctrl.todos | filter:ctrl.query"
       todo="todo"
       on-delete="$ctrl.onDelete(todo)"

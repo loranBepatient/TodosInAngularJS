@@ -1,3 +1,3 @@
 (function() {
-  angular.module("TodosApp", ["ui.router", "TodosModule"]);
+  angular.module("TodosApp", ["ngAnimate", "ui.router", "TodosModule"]);
 })();
