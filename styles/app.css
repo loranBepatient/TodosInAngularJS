@@ -3,7 +3,7 @@
 
 html,
 body {
-  height: 100%;
+  margin: 0;
   box-sizing: border-box;
   background: linear-gradient(to bottom, #cedce7 0%, #596a72 100%);
 }

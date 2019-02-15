@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="TodosApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todos In Angular JS</title>
+    <link rel="stylesheet" href="styles/app.css" />
+    <script src="node_modules/angular/angular.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Todos In Angular JS</title>
-  <link rel="stylesheet" href="styles/app.css">
-  <script src="node_modules/angular/angular.js"></script>
-</head>
+  <body>
+    <nav-bar></nav-bar>
 
-<body>
+    <todos-component></todos-component>
 
-  <nav-bar></nav-bar>
+    <!-- VENDOR -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
-  <todos-component></todos-component>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
 
-  <!-- VENDOR -->
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-  <script src="app/app.module.js"></script>
-  <script src="app/app.controller.js"></script>
-
-  <script src="app/navbar-component/navbar.component.js"></script>
-  <script src="app/todos-component/todos.component.js"></script>
-  <script src="app/todos-component/todo-component/todo.component.js"></script>
-</body>
-
+    <script src="app/navbar-component/navbar.component.js"></script>
+    <script src="app/todos-component/todos.service.js"></script>
+    <script src="app/todos-component/todos.component.js"></script>
+    <script src="app/todos-component/todo-component/todo.component.js"></script>
+  </body>
 </html>
