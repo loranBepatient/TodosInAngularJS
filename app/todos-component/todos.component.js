@@ -1,6 +1,9 @@
 (function() {
   var component = {
     templateUrl: "./app/todos-component/todos.component.html",
+    bindings: {
+      todos: "<"
+    },
     controller: controller
   };
 
@@ -11,14 +14,6 @@
     ctrl.todos = [];
     ctrl.onDelete = onDelete;
     ctrl.onCompleted = onCompleted;
-
-    ctrl.$onInit = onInit;
-
-    function onInit() {
-      TodosService.getTodos().then(function(todos) {
-        ctrl.todos = todos;
-      });
-    }
 
     function onDelete(todo) {
       ctrl.todos = ctrl.todos.filter(function(_todo) {
