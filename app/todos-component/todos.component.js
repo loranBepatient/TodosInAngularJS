@@ -2,69 +2,76 @@
   var component = {
     templateUrl: "./app/todos-component/todos.component.html",
     controller: controller
-  }
+  };
 
   function controller() {
     var ctrl = this;
-    ctrl.title = 'My Todos'
-    ctrl.query = ''
+    ctrl.title = "My Todos";
+    ctrl.query = "";
     ctrl.onDelete = onDelete;
+    ctrl.onCompleted = onCompleted;
     ctrl.todos = [
       {
-        "userId": 1,
-        "id": 1,
-        "title": "delectus aut autem",
-        "completed": false
+        userId: 1,
+        id: 1,
+        title: "delectus aut autem",
+        completed: true
       },
       {
-        "userId": 1,
-        "id": 2,
-        "title": "quis ut nam facilis et officia qui",
-        "completed": false
+        userId: 1,
+        id: 2,
+        title: "quis ut nam facilis et officia qui",
+        completed: false
       },
       {
-        "userId": 1,
-        "id": 3,
-        "title": "fugiat veniam minus",
-        "completed": false
+        userId: 1,
+        id: 3,
+        title: "fugiat veniam minus",
+        completed: false
       },
       {
-        "userId": 1,
-        "id": 4,
-        "title": "et porro tempora",
-        "completed": true
+        userId: 1,
+        id: 4,
+        title: "et porro tempora",
+        completed: true
       },
       {
-        "userId": 1,
-        "id": 5,
-        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        "completed": false
+        userId: 1,
+        id: 5,
+        title:
+          "laboriosam mollitia et enim quasi adipisci quia provident illum",
+        completed: false
       },
       {
-        "userId": 1,
-        "id": 6,
-        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-        "completed": false
+        userId: 1,
+        id: 6,
+        title: "qui ullam ratione quibusdam voluptatem quia omnis",
+        completed: false
       },
       {
-        "userId": 1,
-        "id": 7,
-        "title": "illo expedita consequatur quia in",
-        "completed": false
+        userId: 1,
+        id: 7,
+        title: "illo expedita consequatur quia in",
+        completed: false
       },
       {
-        "userId": 1,
-        "id": 8,
-        "title": "quo adipisci enim quam ut ab",
-        "completed": true
+        userId: 1,
+        id: 8,
+        title: "quo adipisci enim quam ut ab",
+        completed: true
       }
-    ]
+    ];
 
     function onDelete(todo) {
       ctrl.todos = ctrl.todos.filter(function(_todo) {
-        return _todo.id !== todo.id
-      })
+        return _todo.id !== todo.id;
+      });
+    }
+
+    function onCompleted(todo) {
+      var index = ctrl.todos.findIndex(_todo => _todo.id === todo.id);
+      ctrl.todos[index]["completed"] = !ctrl.todos[index]["completed"];
     }
   }
-  angular.module('TodosApp').component('todosComponent', component)
-})()
+  angular.module("TodosApp").component("todosComponent", component);
+})();

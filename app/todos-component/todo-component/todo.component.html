@@ -1,4 +1,7 @@
-<li class='list-group-item'>{{$ctrl.todo.title}}
+<li class="list-group-item" ng-click="$ctrl.complete()">
+  <span ng-class="{'list-group-item__label_done': $ctrl.todo.completed}">
+    {{ $ctrl.todo.title }}
+  </span>
   <button type="button" class="btn btn-danger" ng-click="$ctrl.delete()">
     Supprimer
   </button>

@@ -2,18 +2,24 @@
   var component = {
     templateUrl: "./app/todos-component/todo-component/todo.component.html",
     bindings: {
-      todo: '<',
-      onDelete: '&'
+      todo: "<",
+      onDelete: "&",
+      onCompleted: "&"
     },
     controller: controller
-  }
+  };
   function controller() {
     var ctrl = this;
-    ctrl.delete = onDelete
+    ctrl.delete = onDelete;
+    ctrl.complete = onCompleted;
 
     function onDelete() {
-      ctrl.onDelete({todo: ctrl.todo})
+      ctrl.onDelete({ todo: ctrl.todo });
+    }
+
+    function onCompleted() {
+      ctrl.onCompleted({ todo: ctrl.todo });
     }
   }
-  angular.module('TodosApp').component('todoComponent', component)
-})()
+  angular.module("TodosApp").component("todoComponent", component);
+})();
