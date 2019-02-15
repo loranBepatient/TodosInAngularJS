@@ -6,9 +6,12 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li ng-repeat="link in $ctrl.links" class="nav-item" ng-class="{'active': link.active}">
-        <a ng-href="{{link.link}}" ng-click="$ctrl.onClick(i) " class="nav-link" ng-class="link.disabled? 'disabled' :''" aria-disabled="{{link.disabled}}">
+        <a ui-sref="{{link.link}}" ui-sref-active="active" ng-click="$ctrl.onClick(i) " class="nav-link" ng-class="link.disabled? 'disabled' :''" aria-disabled="{{link.disabled}}">
           {{link.label}}
         </a>
       </li>
   </div>
 </nav>
+
+<!-- <a ui-sref="hello" ui-sref-active="active">Hello</a>
+  <a ui-sref="about" ui-sref-active="active">About</a> -->

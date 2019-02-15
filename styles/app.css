@@ -2,6 +2,7 @@
 @import url("../app/todos-component/todo-component/todo.component.css");
 
 body {
+  height: 100%;
   box-sizing: border-box;
   background: linear-gradient(to bottom, #cedce7 0%, #596a72 100%);
 }

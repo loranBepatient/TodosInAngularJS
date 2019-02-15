@@ -1,3 +1,3 @@
 (function() {
-  angular.module('TodosApp', [])
-})()
+  angular.module("TodosApp", ["ui.router"]);
+})();
