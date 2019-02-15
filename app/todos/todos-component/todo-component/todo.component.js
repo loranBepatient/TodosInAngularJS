@@ -1,6 +1,7 @@
 (function() {
   var component = {
-    templateUrl: "./app/todos-component/todo-component/todo.component.html",
+    templateUrl:
+      "./app/todos/todos-component/todo-component/todo.component.html",
     bindings: {
       todo: "<",
       onDelete: "&",
@@ -21,5 +22,5 @@
       ctrl.onCompleted({ todo: ctrl.todo });
     }
   }
-  angular.module("TodosApp").component("todoComponent", component);
+  angular.module("TodosModule").component("todoComponent", component);
 })();

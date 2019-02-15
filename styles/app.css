@@ -1,5 +1,5 @@
 @import url("../node_modules/bootstrap/dist/css/bootstrap.css");
-@import url("../app/todos-component/todo-component/todo.component.css");
+@import url("../app/todos/todos-component/todo-component/todo.component.css");
 html {
   height: 100%;
 }

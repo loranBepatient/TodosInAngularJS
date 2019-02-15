@@ -14,5 +14,5 @@
       return deferred.promise;
     }
   }
-  angular.module("TodosApp").factory("TodosService", service);
+  angular.module("TodosModule").factory("TodosService", service);
 })();

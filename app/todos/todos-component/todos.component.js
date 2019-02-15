@@ -1,6 +1,6 @@
 (function() {
   var component = {
-    templateUrl: "./app/todos-component/todos.component.html",
+    templateUrl: "./app/todos/todos-component/todos.component.html",
     bindings: {
       todos: "<"
     },
@@ -26,5 +26,5 @@
       ctrl.todos[index]["completed"] = !ctrl.todos[index]["completed"];
     }
   }
-  angular.module("TodosApp").component("todosComponent", component);
+  angular.module("TodosModule").component("todosComponent", component);
 })();
