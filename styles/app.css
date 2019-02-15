@@ -1,9 +1,7 @@
 @import url("../node_modules/bootstrap/dist/css/bootstrap.css");
 @import url("../app/todos-component/todo-component/todo.component.css");
 
-html,
 body {
-  margin: 0;
   box-sizing: border-box;
   background: linear-gradient(to bottom, #cedce7 0%, #596a72 100%);
 }

@@ -15,7 +15,9 @@
     ctrl.$onInit = onInit;
 
     function onInit() {
-      ctrl.todos = TodosService.getTodos();
+      TodosService.getTodos().then(function(todos) {
+        ctrl.todos = todos;
+      });
     }
 
     function onDelete(todo) {
